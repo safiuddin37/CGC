@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* overflow: scroll; */
+
+}
+.navcontainer{
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    margin: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.navcontainer img{
+    width: 160px;
+    height: 160px;
+    margin: 20px;
+    border-radius: 50%;
+    /* padding-left: 100px; */
+    /* padding-right: 50px; */
+    margin-left: 75px;
+    object-fit: cover;
+    /* border: 3px; */
+    /* border-style: solid; */
+    /* border-color: #535252; */
+    /* box-shadow: #535252; */
+}
+.navcontainer img:hover{
+    box-shadow: 0 0 15px #908f8f;
+    transition: all 0.5s ease-in;
+}
+.navcontainer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navcontainer ul li{
+    /* margin: 20px; */
+    width: 100%;
+}
+.navcontainer ul li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    box-sizing: border-box;
+    border: 1px;
+    border-style: solid;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
+    text-align: center;
+    border-radius: 5px;
+}
+.navcontainer ul li a:hover{
+    background-color: #535252;
+    color: white;
+    box-shadow: 0 0 10px #535252;
+    transition: all 0.5s ease-in;
+}
+.about{
+    /* position: absolute; */
+    margin-top: 100px;
+    margin-left: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding-top: 70px;
+}
+.about h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.about h3{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.about p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2pxpx;
+    border-style: dashed;
+    border-color: black;
+    padding: 5px;
+}
+.icons a{
+    text-decoration: none;
+    color: grey;
+    font-size: 30px;
+}
+.icons a:hover{
+    color: #333;
+}
+.Experience{
+    /* height: 450px; */
+    /* width: 1452x; */
+    position: relative;
+    margin-top: 100px;
+    margin-left: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.Experience h1{
+    font-size: 50px;
+    margin-bottom: 10p  x;
+}
+.Experience h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.Experience h4{
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+.Experience p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2pxpx;
+    border-style: dashed;
+    border-color: black;
+    padding: 5px;
+}
+.Education{
+    /* height: 450px; */
+    /* width: 1452x; */
+    position: relative;
+    margin-top: 100px;
+    margin-left: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin-bottom: 70px; ;
+}
+.Education h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.Education h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.Education h4{
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+.Education p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2pxpx;
+    border-style: dashed;
+    border-color: black;
+    padding: 5px;
+}
+.Skills{
+    /* height: 450px; */
+    /* width: 1452x; */
+    position: relative;
+    margin-top: 100px;
+    margin-left: 300px;
+    padding: 20px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin-bottom: 70px;
+}
+.Skills h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.Skills h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.icon2 a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: grey;
+}
+.icon2 a:hover{
+    color: #333;
+}
+.Skills ul{
+    /* list-style: none; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    /* align-items: center; */
+    margin-left: 30px;
+    margin-bottom: 70px;
+}
+.Skills ul li{
+    margin-bottom: 10px;
+}
+.Projects{
+    /* height: 450px; */
+    /* width: 1452x; */
+    position: relative;
+    margin-top: 100px;
+    margin-left: 300px;
+    padding: 20px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-bottom: 70px;
+}
+.Projects h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.Projects h3{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.Projects h4{
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+.Projects p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px;
+    border-style: dashed;
+    border-color: black;
+    padding: 5px;
+}
+.Certificate{
+    /* height: 450px; */
+    /* width: 1452x; */
+    position: relative;
+    margin-top: 100px;
+    margin-left: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-bottom: 120px;
+}
+.Certificate h1{
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+.Certificate p{
+    margin-bottom: 18px;
+}
