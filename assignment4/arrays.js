@@ -104,22 +104,27 @@
 
 
 // Bonus task (is adult method)
-// class Person{
-//     constructor(name,age){
-//         this.name=name;
-//         this.age=age;
-//     }
-// // Methods inside class
-//     isadult(){
-//         if(this.age>=18){
-//             console.log(this.name+" is adult");
-//         }
-//         else{
-//             console.log(this.name+" is not adult");
-//         }
-//     }
-// }
-// var p1 = new Person("Safi",20);
-// var p2 = new Person("Omer",15);
-// p1.isadult();
-// p2.isadult();    
+class Person{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+// Methods inside class
+    isadult(){
+        // if(this.age>=18){
+        //     console.log(this.name+" is adult");
+        // }
+        // else{
+        //     console.log(this.name+" is not adult");
+        // }
+        return this.age>=18;
+    }
+}
+var people=[
+    new Person("Safi",20),
+    new Person("Omer",15),
+    new Person("farhan",25),
+];
+console.log(people);
+let adult = people.filter(person => person.isadult());
+console.log(adult);
