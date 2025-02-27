@@ -54,7 +54,7 @@
 // p1.greet();
 // p2.greet();
 
-// Task: 4
+// // Task: 4
 // // object and nested object
 // var car ={
 //     brand: "Toyota",
@@ -111,12 +111,6 @@ class Person{
     }
 // Methods inside class
     isadult(){
-        // if(this.age>=18){
-        //     console.log(this.name+" is adult");
-        // }
-        // else{
-        //     console.log(this.name+" is not adult");
-        // }
         return this.age>=18;
     }
 }
@@ -126,5 +120,11 @@ var people=[
     new Person("farhan",25),
 ];
 console.log(people);
-let adult = people.filter(person => person.isadult());
+  var adult = [];
+  for (var i = 0; i < people.length; i++) {
+    if (people[i].isadult()) {
+      adult.push(people[i]);
+    }
+  }
 console.log(adult);
+  
