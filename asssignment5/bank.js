@@ -31,14 +31,18 @@ class BankAccount{
     transfer(amount, targetAccountNo){
         if(this.balance-amount>=1000){
             this.balance-=amount;
-            accounts.forEach((val)=>{if(val.accno===targetAccountNo){
-                val.balance+=amount;
-            }})
+            const targetacc= accounts.find(acc=>acc.accno===targetAccountNo);
+            if(!targetacc){
+                throw new Error("Invalid target account number");
+            }
+            targetacc.balance+=amount;
             console.log("Amount transfered successfully");
             console.log("Updated balance of current account is : "+this.balance);
+            console.log("Updated receiver account balance is : "+targetacc.balance)
         }else{
             throw new Error("Balance less then 1000");
         }
+        
     }
     
 }
