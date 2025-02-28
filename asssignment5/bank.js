@@ -15,6 +15,30 @@ class BankAccount{
     }
     deposit(amount){
         this.balance += amount;
+        console.log("Amount deposited!! Updated Balance:"+this.balance);
+    }
+    withdrawal(amount){
+        if (amount>this.balance){
+            console.log("Insufficient funds");
+        } else if ( amount % 100 == 0 || amount % 500 == 0 || amount%200 == 0 || amount % 2000 == 0 ){
+            this.balance=this.balance-amount;
+            console.log("Withdrawal successful. Available balance is:",+this.balance);
+        }
+        else {
+            console.log("Invalid amount");
+        }
+    }
+    transfer(amount, targetAccountNo){
+        if(this.balance-amount>=1000){
+            this.balance-=amount;
+            accounts.forEach((val)=>{if(val.accno===targetAccountNo){
+                val.balance+=amount;
+            }})
+            console.log("Amount transfered successfully");
+            console.log("Updated balance of current account is : "+this.balance);
+        }else{
+            throw new Error("Balance less then 1000");
+        }
     }
     
 }
@@ -22,6 +46,8 @@ function createAccount(accountNumber,name, initialAmount){
     if(accountNumber.length === 10 && accountNumber.startsWith("IN") && initialAmount >= 1000){
         var account = new BankAccount(accountNumber,name,initialAmount);
         accounts.push(account);
+        console.log(account);
+        console.log("Account created successfully!!!");
     }else {
         throw new Error("Invalid account number or balance");
     }
@@ -33,3 +59,12 @@ createAccount("IN12345679","Omer",5000);
 // accounts.push(acc1);
 // accounts.push(acc2);
 console.log(accounts);
+accounts[1].withdrawal(600);
+accounts[0].deposit(3000);
+accounts[1].transfer(1000,"IN12345678")
+function display(accounts){
+    console.log("-----------------DISPLAY-----------------")
+    console.log("Registered Accounts are as follows:")
+    console.log(accounts);
+}
+display(accounts);
