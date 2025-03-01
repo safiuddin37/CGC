@@ -42,9 +42,7 @@ class BankAccount{
         }else{
             throw new Error("Balance less then 1000");
         }
-        
     }
-    
 }
 function createAccount(accountNumber,name, initialAmount){
     if(accountNumber.length === 10 && accountNumber.startsWith("IN") && initialAmount >= 1000){
